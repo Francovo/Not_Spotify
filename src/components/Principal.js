@@ -21,7 +21,7 @@ const Form = chakra("form");
 
 const Spotify = () => {
   const CLIENT_ID = "5514ab31b83749808de57a32d88fb3c9";
-  const REDIRECT_URI = "http://localhost:3000";
+  const REDIRECT_URI = "https://prueba-tecnica-body-tech.vercel.app";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
