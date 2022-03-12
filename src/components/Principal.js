@@ -18,6 +18,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { ModalDetail } from "./Modal";
 const Form = chakra("form");
+const Img = chakra("img");
 
 const Spotify = () => {
   const CLIENT_ID = "5514ab31b83749808de57a32d88fb3c9";
@@ -237,7 +238,10 @@ const Spotify = () => {
                       }}
                     >
                       <Td>{id + 1}</Td>
-                      <Td>{song.name}</Td>
+                      <Td display="flex" flexDirection="column">
+                        <Text> {song.name}</Text>
+                        <Text fontSize='small' color='whiteAlpha.700'>{song.artists[0].name}</Text>
+                      </Td>
                       <Td>{song.album.name}</Td>
                       <Td>
                         {duration.getMinutes()}:
@@ -270,7 +274,8 @@ const Spotify = () => {
           </Flex>
         ) : (
           <Box display={{ base: "none", md: "block" }}>
-            <img
+            <Img
+              width="100vw"
               src="https://cdn.wallpapersafari.com/73/36/kjoK1u.png"
               alt=""
             />
